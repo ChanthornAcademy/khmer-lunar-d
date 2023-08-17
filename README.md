@@ -8,7 +8,7 @@
 
 ```bash
 npm install --save dayjs
-npm install --save dayjs-khmer-lunar-d
+npm install --save khmer-lunar-d
 ```
 
 <!-- using  -->
@@ -17,7 +17,7 @@ npm install --save dayjs-khmer-lunar-d
 
 ```ts
 import dayjs from "dayjs";
-import toKhDate from "dayjs-khmer-lunar-d";
+import toKhDate from "khmer-lunar-d";
 
 dayjs.extend(toKhDate);
 

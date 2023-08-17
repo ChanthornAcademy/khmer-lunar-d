@@ -1,6 +1,6 @@
 {
-  "name": "@chanthorn/khmer-lunar-d",
-  "version": "0.1.0",
+  "name": "khmer-lunar-d",
+  "version": "0.1.1",
   "description": "Khmer Lunar date Plugin for Day.js",
   "main": "./src/main.ts",
   "scripts": {
