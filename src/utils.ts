@@ -1,8 +1,8 @@
 import { constant } from "./constsant";
 import dayjs from "dayjs";
-import { KhmercalType } from "./types/lunar";
+import { KhmercalType } from "../types/lunar";
 
-import { formatRulesType } from "./types/toKhDate";
+import { formatRulesType } from "../types";
 // Khmer date format handler
 const formatKhmerDate = (
   KhmerLunar: KhmercalType,
