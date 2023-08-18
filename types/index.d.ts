@@ -5,27 +5,25 @@ declare const plugin: PluginFunc;
 export = plugin;
 
 export interface formatRulesType {
-  W: () => any;
-  w: () => any;
-  d: () => any;
-  D: () => any;
-  N: () => any;
-  n: () => any;
-  o: () => any;
-  m: () => any;
-  M: () => any;
-  a: () => any;
-  e: () => any;
-  b: () => any;
-  c: () => any;
-  j: () => any;
+  W: string;
+  w: string;
+  d: string;
+  D: string;
+  N: string;
+  n: string;
+  o: string;
+  m: string;
+  M: string;
+  a: string;
+  e: string;
+  b: string;
+  c: string;
+  j: string;
 }
 
 declare namespace plugin {
   export interface toKhDate {
-    toKhDate(
-      format?: formatRulesType | string | null | undefined,
-    ): string | undefined;
+    toKhDate(format?: formatRulesType): string;
   }
 }
 

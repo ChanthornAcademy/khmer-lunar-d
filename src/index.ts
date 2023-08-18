@@ -8,9 +8,7 @@ import { PluginFunc } from "dayjs";
 
 const toKhDate: PluginFunc<plugin.toKhDate> = (o, c, d) => {
   const proto = c.prototype;
-  proto.toKhDate = function (
-    format?: formatRulesType | string | null | undefined,
-  ) {
+  proto.toKhDate = function (format?: formatRulesType) {
     return formatKhmerDate(
       lunar(new Date(this.format())) as KhmercalType,
       this,
