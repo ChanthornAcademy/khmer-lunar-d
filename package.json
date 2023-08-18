@@ -1,6 +1,6 @@
 {
   "name": "khmer-lunar-d",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Khmer Lunar date Plugin for Day.js",
   "main": "./src/main.ts",
   "scripts": {
@@ -13,14 +13,12 @@
     "url": "https://github.com/ChanthornAcademy/khmer-lunar-d.git"
   },
   "keywords": [
-    "Khmer",
-    "date",
-    "Khmer",
-    "Lunar",
+    "Khmer date",
+    "Khmer Lunar",
     "Lunar"
   ],
   "author": "chanthorn",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^5.0.2",
     "vite": "^4.4.5"

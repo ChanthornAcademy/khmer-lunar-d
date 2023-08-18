@@ -1,24 +1,13 @@
 import { constant } from "./constsant";
 import dayjs from "dayjs";
-import { KhmercalType } from "./lunar";
-import learnSak from "./lerngSak";
-import { lunar } from "khmercal";
+import { KhmercalType } from "./types/lunar";
 
-const getKhmerLunarDayName = (
-  day: number,
-): { count: number; moonStatus: number } => {
-  return {
-    count: (day % 15) + 1,
-    moonStatus:
-      day > 14 ? constant.moonStatus["រោច"] : constant.moonStatus["កើត"],
-  };
-};
-
+import { formatRulesType } from "./types/toKhDate";
 // Khmer date format handler
 const formatKhmerDate = (
   KhmerLunar: KhmercalType,
   date: dayjs.Dayjs,
-  format?: string,
+  format?: formatRulesType | string | null | undefined,
 ): string | undefined => {
   if (format === null || format === undefined || format === "") {
     // Default date format
