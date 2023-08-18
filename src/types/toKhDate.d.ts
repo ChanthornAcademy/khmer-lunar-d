@@ -22,5 +22,9 @@ export interface formatRulesType {
 }
 
 declare module "dayjs" {
-  export function toKhDate(format?: formatRulesType | null | undefined): string;
+  interface Dayjs {
+    toKhDate(
+      format?: formatRulesType | string | null | undefined,
+    ): string | undefined;
+  }
 }
