@@ -1,8 +1,8 @@
 {
   "name": "khmer-lunar-d",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Khmer Lunar date Plugin for Day.js",
-  "main": "./src/main.ts",
+  "main": "./src/index.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

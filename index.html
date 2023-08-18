@@ -15,7 +15,7 @@
     </div>
     <script type="module">
       import dayjs from "dayjs";
-      import toKhDate from "./src/main.ts";
+      import toKhDate from "./src/index.ts";
       dayjs.extend(toKhDate);
       const date = dayjs().set("year", 2050).set("month", 0).set("date", 1);
       const ul = document.querySelector("ul");

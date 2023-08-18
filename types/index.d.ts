@@ -21,10 +21,14 @@ export interface formatRulesType {
   j: () => any;
 }
 
-declare module "dayjs" {
-  interface Dayjs {
+declare namespace plugin {
+  export interface toKhDate {
     toKhDate(
       format?: formatRulesType | string | null | undefined,
     ): string | undefined;
   }
+}
+
+declare module "dayjs" {
+  interface Dayjs extends plugin.toKhDate {}
 }

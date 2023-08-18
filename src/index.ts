@@ -1,10 +1,12 @@
 import { lunar } from "khmercal";
 import { utils } from "./utils";
 import { KhmercalType } from "../types/lunar";
-import { formatRulesType } from "../types";
+import plugin, { formatRulesType } from "../types";
 const { formatKhmerDate } = utils;
 
-export default function toKhDate(o, c, d) {
+import { PluginFunc } from "dayjs";
+
+const toKhDate: PluginFunc<plugin.toKhDate> = (o, c, d) => {
   const proto = c.prototype;
   proto.toKhDate = function (
     format?: formatRulesType | string | null | undefined,
@@ -15,4 +17,8 @@ export default function toKhDate(o, c, d) {
       format,
     );
   };
-}
+};
+
+export default toKhDate;
+
+// Path: src/index.ts
