@@ -3,17 +3,15 @@ import { utils } from "./utils";
 import { KhmercalType } from "../types/lunar";
 import plugin, { formatRulesType } from "../types";
 const { formatKhmerDate } = utils;
+import { constant } from "./constsant";
 
 import { PluginFunc } from "dayjs";
 
 const toKhDate: PluginFunc<plugin.toKhDate> = (o, c, d) => {
   const proto = c.prototype;
   proto.toKhDate = function (format?: formatRulesType) {
-    return formatKhmerDate(
-      lunar(new Date(this.format())) as KhmercalType,
-      this,
-      format,
-    );
+    const date = constant.kh.preparse(this.format());
+    return formatKhmerDate(lunar(date) as KhmercalType, this, format);
   };
 };
 
